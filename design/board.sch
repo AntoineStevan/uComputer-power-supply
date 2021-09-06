@@ -207,9 +207,9 @@ Wire Wire Line
 	2100 1150 2500 1150
 Connection ~ 2100 1150
 Text Label 3800 1900 0    50   ~ 0
-+5V
+VCC_OUT
 Text Label 3800 2650 0    50   ~ 0
-GND
+GND_OUT
 Connection ~ 3450 2650
 Wire Notes Line width 12
 	3750 2700 3750 1100
@@ -246,52 +246,6 @@ Wire Wire Line
 	2250 1600 2250 1650
 Wire Notes Line width 12
 	1300 2700 2850 2700
-$Comp
-L Connector:Conn_01x01_Male J4
-U 1 1 619F23AE
-P 4300 1900
-F 0 "J4" H 4272 1832 50  0000 R CNN
-F 1 "Conn_01x01_Male" H 4272 1923 50  0000 R CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 4300 1900 50  0001 C CNN
-F 3 "~" H 4300 1900 50  0001 C CNN
-	1    4300 1900
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J5
-U 1 1 619F2B67
-P 4300 2650
-F 0 "J5" H 4272 2582 50  0000 R CNN
-F 1 "Conn_01x01_Male" H 4272 2673 50  0000 R CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 4300 2650 50  0001 C CNN
-F 3 "~" H 4300 2650 50  0001 C CNN
-	1    4300 2650
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J3
-U 1 1 619F2E9F
-P 2600 2900
-F 0 "J3" H 2572 2832 50  0000 R CNN
-F 1 "Conn_01x01_Male" H 2572 2923 50  0000 R CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 2600 2900 50  0001 C CNN
-F 3 "~" H 2600 2900 50  0001 C CNN
-	1    2600 2900
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J2
-U 1 1 619F3322
-P 2400 950
-F 0 "J2" H 2372 882 50  0000 R CNN
-F 1 "Conn_01x01_Male" H 2372 973 50  0000 R CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 2400 950 50  0001 C CNN
-F 3 "~" H 2400 950 50  0001 C CNN
-	1    2400 950 
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2100 950  2200 950 
 Connection ~ 2100 950 
 Wire Wire Line
 	2100 950  2100 1150
@@ -333,6 +287,45 @@ $EndComp
 Wire Wire Line
 	2200 2950 2200 2900
 Connection ~ 2200 2900
+$Comp
+L Connector:Conn_01x04_Female J6
+U 1 1 613B3325
+P 4550 2150
+F 0 "J6" H 4578 2126 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 4578 2035 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical" H 4550 2150 50  0001 C CNN
+F 3 "~" H 4550 2150 50  0001 C CNN
+	1    4550 2150
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2400 2900 2200 2900
+	4100 1900 4100 2250
+Wire Wire Line
+	4100 2250 4350 2250
+Wire Wire Line
+	4100 2650 4100 2350
+Wire Wire Line
+	4100 2350 4350 2350
+Wire Wire Line
+	4350 2050 4300 2050
+Wire Wire Line
+	4300 2050 4300 950 
+Wire Wire Line
+	2100 950  4300 950 
+Wire Wire Line
+	4350 2150 4300 2150
+Wire Wire Line
+	4300 2150 4300 2900
+Wire Wire Line
+	2200 2900 4300 2900
+Text Label 2500 2900 0    50   ~ 0
+GND_IN
+Text Label 2350 950  0    50   ~ 0
+VCC_IN
+Text Label 2500 1850 0    50   ~ 0
+MID_PWR
+Text Label 3000 1550 0    50   ~ 0
+MID_OFF
+Text Label 3000 2300 0    50   ~ 0
+MID_ON
 $EndSCHEMATC
