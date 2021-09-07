@@ -19,7 +19,7 @@ U 1 1 6154FA04
 P 1650 1900
 F 0 "J1" H 1707 2217 50  0000 C CNN
 F 1 "Barrel_Jack_Switch" H 1707 2126 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal" H 1700 1860 50  0001 C CNN
+F 2 "my_power:DC_barrel_2.1x5.5d" H 1700 1860 50  0001 C CNN
 F 3 "~" H 1700 1860 50  0001 C CNN
 	1    1650 1900
 	1    0    0    -1  
@@ -27,11 +27,7 @@ $EndComp
 Wire Wire Line
 	1950 1800 2050 1800
 Wire Wire Line
-	2050 1800 2050 2000
-Wire Wire Line
 	2050 2000 1950 2000
-Wire Wire Line
-	1950 1900 2100 1900
 Connection ~ 2050 2000
 $Comp
 L power:GND #PWR01
@@ -61,7 +57,7 @@ U 1 1 61575736
 P 3450 1500
 F 0 "SW1" V 3350 1700 50  0000 C CNN
 F 1 "main" V 3500 1700 50  0000 C CNN
-F 2 "my_buttons:pushbutton_switch" H 3450 1700 50  0001 C CNN
+F 2 "Button_Switch_THT:SW_E-Switch_EG1271_DPDT" H 3450 1700 50  0001 C CNN
 F 3 "~" H 3450 1700 50  0001 C CNN
 	1    3450 1500
 	0    1    1    0   
@@ -202,9 +198,7 @@ Wire Wire Line
 	2050 2650 2500 2650
 Connection ~ 2050 2650
 Wire Wire Line
-	2100 1900 2100 1600
-Wire Wire Line
-	2100 1150 2500 1150
+	2100 1150 2250 1150
 Connection ~ 2100 1150
 Text Label 3800 1900 0    50   ~ 0
 VCC_OUT
@@ -232,18 +226,11 @@ power supply
 Text Notes 2950 2800 0    50   ~ 10
 power switch\n
 Wire Wire Line
-	2250 1600 2100 1600
-Connection ~ 2100 1600
-Wire Wire Line
-	2100 1600 2100 1150
-Wire Wire Line
 	2050 2000 2250 2000
 Wire Wire Line
 	2050 2000 2050 2650
 Wire Wire Line
 	2250 2000 2250 1950
-Wire Wire Line
-	2250 1600 2250 1650
 Wire Notes Line width 12
 	1300 2700 2850 2700
 Connection ~ 2100 950 
@@ -288,10 +275,10 @@ Wire Wire Line
 	2200 2950 2200 2900
 Connection ~ 2200 2900
 $Comp
-L Connector:Conn_01x04_Female J6
+L Connector:Conn_01x04_Female J2
 U 1 1 613B3325
 P 4550 2150
-F 0 "J6" H 4578 2126 50  0000 L CNN
+F 0 "J2" H 4578 2126 50  0000 L CNN
 F 1 "Conn_01x04_Female" H 4578 2035 50  0000 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical" H 4550 2150 50  0001 C CNN
 F 3 "~" H 4550 2150 50  0001 C CNN
@@ -328,4 +315,17 @@ Text Label 3000 1550 0    50   ~ 0
 MID_OFF
 Text Label 3000 2300 0    50   ~ 0
 MID_ON
+Wire Wire Line
+	2050 1800 2050 1150
+Wire Wire Line
+	2050 1150 2100 1150
+Wire Wire Line
+	2250 1150 2250 1650
+Connection ~ 2250 1150
+Wire Wire Line
+	2250 1150 2500 1150
+Wire Wire Line
+	1950 1900 2050 1900
+Wire Wire Line
+	2050 1900 2050 2000
 $EndSCHEMATC
